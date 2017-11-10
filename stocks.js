@@ -9,7 +9,7 @@ function stockGroup(n, t, i, v, q){
     return this.value * this.quantity;
   };
   
-  this.sellStuff = function(q){
+  this.sell = function(q){
     if (q <= this.quantity){
       this.quanitity = this.quantity - q;
       
