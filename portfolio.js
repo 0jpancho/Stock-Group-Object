@@ -34,9 +34,10 @@ function Portfolio(){
     };
 
     this.sell = function(tkr,qnt){
-        let position = search(tkr);
-
-        if (position )
+        
+        if(findStock)tikr) >= 0) {
+            return this.stocks[findStock(tkr)].sell(qnt);
+        }
     };
 
     this.totalValue = function(){
