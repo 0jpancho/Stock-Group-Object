@@ -12,15 +12,26 @@ function Portfolio(){
                 return s;
             }
         }
-        return i;
+        return -1;
     }
 
     //instance functions
     this.add = function(stk){
         this.stocks.push(stk)
     };
-    this.update = function(tkr,val){};
-    this.buy = function(tkr,qnt){};
+    this.update = function(tkr,val){
+        if(findStock(tkr) >= 0){
+            this.stocks[findStock(tkr)].value = val;
+        }
+    };
+    this.buy = function(tkr,qnt){
+        if(findStock(tkr) >= 0){
+            if(findStock(tkr) >= 0) {
+                //new = old + qnt;
+                this.stocks[findStock(tkr)].quantity = "old"+qnt;   
+            }
+        }
+    };
 
     this.sell = function(tkr,qnt){
         let position = search(tkr);
