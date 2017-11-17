@@ -7,7 +7,7 @@ function Portfolio(){
     function findStock(trk,list){
         //i represents the index of the trk you are looking for in this.stocks
         let i;
-        for(let s = 0;, s < this.stocks.length; s++){
+        for(let s = 0; s < this.stocks.length; s++){
             if(tkr == this.stocks[s].ticker){
                 return s;
             }
@@ -28,14 +28,14 @@ function Portfolio(){
         if(findStock(tkr) >= 0){
             if(findStock(tkr) >= 0) {
                 //new = old + qnt;
-                this.stocks[findStock(tkr)].quantity = "old"+qnt;   
+                this.stocks[findStock(tkr)].quantity = "old"+qnt;
             }
         }
     };
 
     this.sell = function(tkr,qnt){
-        
-        if(findStock)tikr) >= 0) {
+
+        if(findStock(tkr) >= 0) {
             return this.stocks[findStock(tkr)].sell(qnt);
         }
     };
